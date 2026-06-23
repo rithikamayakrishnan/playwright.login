@@ -10,19 +10,19 @@ test.describe('Facebook Login Scenarios', () => {
     await login.enterPassword('Gokul@123');
     await login.clicklogin();
     await login.clickSkipTour();
-    await login.clickGS();
+      await login.clickGS();
      await page.waitForTimeout(5000);
     await login.clicklogout(); 
 }); 
 
-  /*test('TC02 - Invalid password', async ({ page }) => {
+  test('TC02 - Invalid password', async ({ page }) => {
     const login = new LoginPage(page);
     await login.gotoLogin();
     await login.enterEmail('Gokul.s@Nexasoft.com');
    await login.enterPassword('wrong_password');
    await login.clicklogin();
    await page.waitForTimeout(3000);
-  });*/
+  });
 
   test('TC03 - Invalid Email', async ({ page }) => {
     const login = new LoginPage(page);

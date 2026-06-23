@@ -28,6 +28,10 @@ export class LoginPage {
    async clickGS(){
     await this.page.getByRole('button',{ name:'GS'}).click();
    }
+   async clickemployees(){
+    await this.page.getByRole
+
+   }
 
 
    async clicklogout() {

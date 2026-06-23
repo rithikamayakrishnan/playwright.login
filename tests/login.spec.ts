@@ -18,7 +18,7 @@ test.describe('Facebook Login Scenarios', () => {
      await page.waitForTimeout(3000);
 }); 
 
-  /*test('TC02 - Invalid password', async ({ page }) => {
+  test('TC02 - Invalid password', async ({ page }) => {
     const login = new LoginPage(page);
     await login.gotoLogin();
     await login.enterEmail('Gokul.s@Nexasoft.com');
@@ -235,5 +235,5 @@ test('TC26 - password with leading spaces', async ({ page }) => {
   await login.enterEmail('Gokul.s@Nexasoft.com');
   await login.enterPassword('Gokul@123    ');
    await login.clicklogin();
-   await page.waitForTimeout(3000);*/
+   await page.waitForTimeout(3000);
 });

@@ -13,7 +13,7 @@ test.describe('Facebook Login Scenarios', () => {
     await login.clickSkipTour();
     await login.clickGS();
      await page.waitForTimeout(5000);
-    await SignOut.hover();
+    await login.hoverSignOut();
     await login.clicklogout(); 
      await page.waitForTimeout(3000);
 }); 

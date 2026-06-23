@@ -30,7 +30,7 @@ export class LoginPage {
    }
 
   async hoverSignOut() {
-    await this.SignOut.hover();
+    await this.hoverSignOut();
   }
    async clicklogout() {
     await this.page.getByRole('button', { name: 'Sign out' }).click();

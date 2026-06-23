@@ -9,13 +9,10 @@ test.describe('Facebook Login Scenarios', () => {
     await login.enterEmail('Gokul.s@Nexasoft.com');
     await login.enterPassword('Gokul@123');
     await login.clicklogin();
-    await page.waitForTimeout(3000);
     await login.clickSkipTour();
     await login.clickGS();
      await page.waitForTimeout(5000);
-    await login.hoverSignOut();
     await login.clicklogout(); 
-     await page.waitForTimeout(3000);
 }); 
 
   test('TC02 - Invalid password', async ({ page }) => {
@@ -67,10 +64,9 @@ test.describe('Facebook Login Scenarios', () => {
     const login = new LoginPage(page);
     await login.gotoLogin();
     await login.enterEmail('AWEERJTDGFKYT');
-     await page.waitForTimeout(3000);
     await login.enterPassword('QWERTYUIOP');
      await login.clicklogin();
-     await page.waitForTimeout(3000);
+     await page.waitForTimeout(5000);
   });
   test('TC08 - Only special character in fields',async ({ page }) => {
     const login = new LoginPage(page);

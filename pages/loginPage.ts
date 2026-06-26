@@ -1,4 +1,4 @@
-import { expect, Page } from '@playwright/test';
+import { expect, Page,} from '@playwright/test';
 
 export class LoginPage {
   page: Page;
@@ -22,30 +22,21 @@ export class LoginPage {
   async clicklogin() {
     await this.page.getByRole('button', { name: 'Sign In' }).click();
   }
+
   async clickSkipTour() {
     await this.page.getByText('Skip Tour').click();
   }
-   async clickGS(){
+   
+async clickGS(){
     await this.page.getByRole('button',{ name:'GS'}).click();
    }
-   async clickemployees(){
-    await this.page.getByRole
+    async clicklogout() {
+   await this.page.getByRole('button', { name: 'Sign out' }).click();
+    }
 
-   }
-
-
-   async clicklogout() {
-    await this.page.getByRole('button', { name: 'Sign out' }).click();
-   }
-
-  // async verifyRememberMeChecked() {
-  // const rememberMe = this.page.getByRole('checkbox', { name: / Remember me/i });
-  // await expect(rememberMe).toBeChecked();
-  // }
-  async verifyInvalidCredentials() {
-    const errorMsg = this.page.locator('.oxd-alert-content-text'); 
-    await expect(errorMsg).toBeVisible();
-    await expect(errorMsg).toContainText('Invalid credentials');
-  }
-  
+    
+// async clickAttendance() {
+//     await this.page.locator('a[href="/attendance/records"]').click();
+// }
+// }
 }

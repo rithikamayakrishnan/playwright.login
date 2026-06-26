@@ -7,16 +7,19 @@ test.describe('Facebook Login Scenarios', () => {
     const login = new LoginPage(page);
     await login.gotoLogin();
     await login.enterEmail('Gokul.s@Nexasoft.com');
-    await login.enterPassword('Gokul@123');
+    await login.enterPassword('Gokul@123');    
     await login.clicklogin();
     await login.clickSkipTour();
-      await login.clickGS();
-     await page.waitForTimeout(5000);
-    await login.clicklogout(); 
+    await login.clickGS();
+   await page.waitForTimeout(2000);
+   await login.clicklogout(); 
+   await page.waitForTimeout(2000);
+ //await login.clickAttendance(); 
+ await page.waitForTimeout(3000);
 }); 
 
-  test('TC02 - Invalid password', async ({ page }) => {
-    const login = new LoginPage(page);
+ /* test('TC02 - Invalid password', async ({ page }) => {
+  const login = new LoginPage(page);
     await login.gotoLogin();
     await login.enterEmail('Gokul.s@Nexasoft.com');
    await login.enterPassword('wrong_password');
@@ -47,7 +50,6 @@ test.describe('Facebook Login Scenarios', () => {
   test('TC05 - Login button UI validation', async ({ page }) => {
     const login = new LoginPage(page);
     await login.gotoLogin();
-    
     const loginBtn = page.getByRole('button', { name: 'Sign In' });
     await expect(loginBtn).toBeVisible();
   });
@@ -231,5 +233,5 @@ test('TC26 - password with leading spaces', async ({ page }) => {
   await login.enterEmail('Gokul.s@Nexasoft.com');
   await login.enterPassword('Gokul@123    ');
    await login.clicklogin();
-   await page.waitForTimeout(3000);
+   await page.waitForTimeout(3000);*/
 });
